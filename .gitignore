@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+.lock-wscript
+# build/*
+._*
+.DS_Store
+.idea
+node_modules/
+

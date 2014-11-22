@@ -1,0 +1,20 @@
+
+<div class="panel-header">
+  <div class="title">{{title}}</div>
+  <div class="close"><i class="icon icon-close"></i></div>
+</div>
+<div class="tree-view">
+  <div class="label">
+    <div ng-show="valid" class="text">{{label}}</div>
+    <div ng-show="!valid" class="text">HTML is malformed</div>
+  </div>
+  <div class="tree-component">
+    <ul>
+      <li ng-repeat="node in node.children" ng-include="'html_node.html'"></li>
+    </ul>
+  </div>
+  <div class="panel-footer">
+    <div class="left"><a href="#">Link</a></div>
+    <div class="right"><a class="button">Done</a></div>
+  </div>
+</div>

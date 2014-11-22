@@ -1,0 +1,188 @@
+body
+    background-color: #f2f2f2
+    font-family: 'Open Sans', sans-serif
+    font-weight: 400
+
+#container
+    padding: 15px
+
+i.icon
+        display: inline-block
+        background-image: url('/images/icon-sprite.png')
+        background-repeat: none
+        width: 14px
+        height: 14px
+        margin-right: 5px
+
+.icon-folder-public
+    background-position: 0 0
+
+.icon-folder-private
+    background-position: -14px 0
+
+.icon-file
+    background-position: -28px 0
+
+.icon-close
+    background-position: -42px 0
+
+.icon-expand-dark
+    background-position: -56px 0
+    opacity: 0.35
+
+.icon-collapse-dark
+    background-position: -70px 0
+    opacity: 0.35
+
+.icon-expand-light
+    background-position: -84px 0
+
+.icon-collapse-light
+    background-position: -98px 0
+
+.wrapper
+    float: left
+
+.panel-header
+    margin: 0
+    height: 50px
+    font-size: 13px
+    background-color: #f5f5f5
+    overflow: hidden
+    border-bottom: 1px solid #e2e2e2
+    box-shadow: 0 3px 1px #f7f7f7
+
+    .title
+        margin-left: 15px
+        margin-top: 15px
+        font-weight: 600
+        float: left
+
+    .close
+        float: right
+        margin-top: 15px
+        margin-right: 15px
+        opacity: 0.3
+
+    .close:hover
+        cursor: pointer
+
+#html-editor-container
+    position: relative
+    overflow: hidden
+    width: 900px
+    padding: 0
+    border: 1px solid #c1c1c1
+    border-radius: 5px
+    background-color: #f5f5f5
+    box-shadow: 0px 30px 70px #b1b1b1
+
+    h3
+        margin-left: 15px
+        font-size: 10px
+
+#html-editor
+    width: 900px
+    height: 300px
+
+#inspector-container
+    width: 300px
+    margin-left: 50px
+
+#html-inspector
+    position: relative
+    overflow: hidden
+    background-color: #fff
+    padding: 0
+    border: 1px solid #c1c1c1
+    border-radius: 5px
+    width: 320px
+    box-shadow: 0px 30px 70px #b1b1b1
+    overflow: auto
+
+
+    .tree-view
+        border-bottom: 1px solid #e2e2e2
+        box-shadow: 0 3px 1px #f7f7f7
+        font-weight: 300
+        font-size: 12px
+
+        .label
+            height: 25px
+            color: #b2b2b2
+            border-bottom: 1px solid #e2e2e2
+            box-shadow: 0 3px 1px #f7f7f7
+
+            .text
+                margin: 10px 0 0 15px
+                font-size: 11px
+                font-weight: 400
+
+        .tree-component
+            margin-top: 20px
+            padding-bottom: 15px
+            border-bottom: 1px solid #e2e2e2
+            box-shadow: 0 3px 1px #f7f7f7
+
+    .panel-footer
+        height: 14px
+        padding: 18px
+
+        a
+            text-decoration: none
+            font-weight: 400
+            font-size: 13px
+
+        .left
+            float: left
+            a
+                color: #427fed
+
+        .right
+            float: right
+            padding-right: 10px
+            a
+                font-weight: 300
+                font-size: 12px
+                background-color: #4285f4
+                padding: 6px 15px
+                border: 1px solid #3c78dc
+                border-radius: 2px
+                color: #fff
+
+    ul
+        background: transparent
+        padding-left: 0
+        list-style-type: none
+
+        li
+            background: transparent
+            padding-left: 20px
+
+
+.node-selected
+    color: #fff
+
+.node-unselected
+    color: #666
+
+.node-selected::before
+    content: " "
+    position: absolute
+    z-index: 100
+    width: 100%
+    height: 23px
+    background-color: #4285f4
+    left: 0
+    margin-top: -3px
+
+.node-folder, .node-file, .node-name
+    position: relative
+    z-index: 200
+    white-space: nowrap
+
+.node-file
+    padding-left: 15px
+
+.node-entry
+    margin: 5px 0

@@ -1,0 +1,15 @@
+.node-entry(ng-class="{'node-selected': node.selected, 'node-unselected': !node.selected}")
+    span.node-folder(ng-show="node.folder" ng-click="node.expanded = !node.expanded")
+        i.icon.icon-expand-dark(ng-show="node.expanded == false && node.selected == false")
+        i.icon.icon-expand-light(ng-show="node.expanded == false && node.selected == true")
+        i.icon.icon-collapse-dark(ng-show="node.expanded == true && node.selected == false")
+        i.icon.icon-collapse-light(ng-show="node.expanded == true && node.selected == true")
+        i.icon.icon-folder-public(ng-show="!node.private")
+        i.icon.icon-folder-private(ng-show="node.private")
+    span.node-file(ng-show="node.file")
+        i.icon.icon-file(ng-show="node.file")
+    span.node-name(ng-click="toggleNodeSelected(node)")
+        span.node-name(ng-show="node.folder") {{node.tag | truncateString:15}}
+        span.node-name(ng-show="node.file") {{node.value | truncateString:15}}
+    ul(ng-show="node.expanded && node.children.length > 0")
+        li(ng-repeat="node in node.children" ng-include="'html_node.html'")

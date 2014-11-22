@@ -1,0 +1,6 @@
+
+<div ng-class="{'node-selected': node.selected, 'node-unselected': !node.selected}" class="node-entry"><span ng-show="node.folder" ng-click="node.expanded = !node.expanded" class="node-folder"><i ng-show="node.expanded == false &amp;&amp; node.selected == false" class="icon icon-expand-dark"></i><i ng-show="node.expanded == false &amp;&amp; node.selected == true" class="icon icon-expand-light"></i><i ng-show="node.expanded == true &amp;&amp; node.selected == false" class="icon icon-collapse-dark"></i><i ng-show="node.expanded == true &amp;&amp; node.selected == true" class="icon icon-collapse-light"></i><i ng-show="!node.private" class="icon icon-folder-public"></i><i ng-show="node.private" class="icon icon-folder-private"></i></span><span ng-show="node.file" class="node-file"><i ng-show="node.file" class="icon icon-file"></i></span><span ng-click="toggleNodeSelected(node)" class="node-name"><span ng-show="node.folder" class="node-name">{{node.tag | truncateString:15}}</span><span ng-show="node.file" class="node-name">{{node.value | truncateString:15}}</span></span>
+  <ul ng-show="node.expanded &amp;&amp; node.children.length &gt; 0">
+    <li ng-repeat="node in node.children" ng-include="'html_node.html'"></li>
+  </ul>
+</div>

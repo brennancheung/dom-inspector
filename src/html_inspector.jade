@@ -1,0 +1,19 @@
+.panel-header
+    .title {{title}}
+    .close
+        i.icon.icon-close
+.tree-view
+    .label
+        .text(ng-show="valid") {{label}}
+        .text(ng-show="!valid") HTML is malformed
+
+    //- pre {{node | yaml}}
+    .tree-component
+        ul
+            li(ng-repeat="node in node.children" ng-include="'html_node.html'")
+
+    .panel-footer
+        .left
+            a(href="#") Link
+        .right
+            a.button Done

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head charset="utf-8">
+    <title>DOM Navigator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/codemirror.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/addon/dialog/dialog.css" rel="stylesheet" type="text/css">
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-app="dom-nav">
+    <h1>HTML Inspector</h1>
+    <div id="container" ng-controller="ApplicationCtrl">
+      <div class="wrapper">
+        <div id="html-editor-container">
+          <div class="panel-header">
+            <div class="title">Type HTML below</div>
+          </div>
+          <div id="html-editor" dom="dom" html-editor></div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div id="inspector-container">
+          <div id="html-inspector" dom="dom" html-inspector></div>
+        </div>
+      </div><br style="clear: both">
+    </div>
+    <!-- 3rd party libraries-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="js-yaml.js"></script>
+    <!-- CodeMirror-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/codemirror.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/javascript/javascript.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/css/css.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/xml/xml.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/addon/selection/active-line.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/addon/fold/xml-fold.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/addon/edit/matchtags.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/addon/dialog/dialog.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/addon/search/searchcursor.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/mode/clike/clike.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/4.7.0/keymap/vim.js" type="text/javascript"></script>
+    <!-- app code-->
+    <script src="app.js" type="text/javascript"></script>
+    <script src="application_ctrl.js" type="text/javascript"></script>
+    <script src="html_editor_directive.js" type="text/javascript"></script>
+    <script src="html_inspector_directive.js" type="text/javascript"></script>
+  </body>
+</html>
